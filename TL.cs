@@ -10,7 +10,7 @@ namespace TelegramTestBot
         static TelegramBotClient BotClient;
         static void Main(string[] args)
         {
-            BotClient = new TelegramBotClient("1371351010:AAGimx5E5g07L7glY-m5KK0zETDKTHHXD44");
+            BotClient = new TelegramBotClient("There have to be a bot token");
             var me = BotClient.GetMeAsync().Result;
             BotClient.StartReceiving();
             BotClient.OnMessage += BotClient_OnMessage;
@@ -26,7 +26,7 @@ namespace TelegramTestBot
             {
                 await BotClient.SendTextMessageAsync(
                     chatId: e.Message.Chat,
-                      text: "Max Pidor");
+                      text: "Message");
                 
             }
             if (e.Message.Photo != null)
